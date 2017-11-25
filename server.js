@@ -11,13 +11,13 @@ server.listen(port, function () {
 });
 
 //var url = 'localhost:27017/testdb';
-//var monk = require('monk');
-//var db = monk(url);
-// const db = require('monk')('user:pass@localhost:port/mydb')
 
-// db.then(() => {
-// 	console.log('Connected correctly to server')
-// })
+//var db = monk(url);
+const db = require('monk')('process.env.MONGODB_USER:process.env.MONGODB_PASSWORD@localhost:27017/sampledb')
+
+db.then(() => {
+	console.log('Connected correctly to server')
+})
 
 //Routing
 app.use(express.static(path.join(__dirname, 'public')));

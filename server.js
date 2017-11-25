@@ -19,7 +19,7 @@ server.listen(port, function () {
 // 	console.log('Connected correctly to server')
 // })
 
-Routing
+//Routing
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Chatroom

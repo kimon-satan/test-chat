@@ -8,10 +8,12 @@
   "license": "BSD",
   "dependencies": {
     "express": "4.13.4",
+    "mongodb": "^2.2.33",
+    "monk": "^6.0.5",
     "path": "^0.12.7",
     "socket.io": "^2.0.4"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "mongod --dbpath data &>/dev/null& node server.js"
   }
 }

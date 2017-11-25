@@ -10,6 +10,14 @@ server.listen(port, function () {
   console.log('Server listening at port %d', port);
 });
 
+var url = 'localhost:27017/testdb';
+var monk = require('monk');
+var db = monk(url);
+
+db.then(() => {
+	console.log('Connected correctly to server')
+})
+
 // Routing
 app.use(express.static(path.join(__dirname, 'public')));
 

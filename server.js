@@ -15,9 +15,9 @@ server.listen(port, function () {
 //var db = monk(url);
 // const db = require('monk')('user:pass@localhost:port/mydb')
 
-db.then(() => {
-	console.log('Connected correctly to server')
-})
+// db.then(() => {
+// 	console.log('Connected correctly to server')
+// })
 
 // Routing
 app.use(express.static(path.join(__dirname, 'public')));

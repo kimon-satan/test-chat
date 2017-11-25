@@ -10,7 +10,7 @@ server.listen(port, function () {
   console.log('Server listening at port %d', port);
 });
 
-var url = 'localhost:27017/testdb';
+var url = '10.131.8.146:27017/testdb';
 var monk = require('monk');
 var db = monk(url);
 
